@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact.class';
+import ContactComponentB from './contactB';
 
 
-
-const ContactComponent = ({contact}) => {
+const ContactComponentA = ({contact}) => {
     return (
         <div>
             <h2>
@@ -16,17 +16,14 @@ const ContactComponent = ({contact}) => {
             <h4>
                 Email: { contact.email }
             </h4>
-            <h5>
-                Estado: { contact.completed ? 'Contacto En Línea':'Contacto No Disponible'} {/*? "true":"false" comprueba si esta completada o no */}
-            </h5>
+            <ContactComponentB conectado={true}></ContactComponentB>
         </div>
     );
 };
 
-
-ContactComponent.propTypes = {
+ContactComponentA.propTypes = {
     contact: PropTypes.instanceOf(Contact)
 };
 
 
-export default ContactComponent;
+export default ContactComponentA;
