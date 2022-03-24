@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ContactlistComponent from './components/container/contactList';
+import Clock from './components/pure/clock';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <ContactlistComponent></ContactlistComponent>
+          {/* <ContactlistComponent></ContactlistComponent> */}
+        <Clock></Clock>
         </p>
         
       </header>
